@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>伪元素选择器</title>
+  <style>
+    /* 选中第一个单词变换 */
+    div p::first-letter {
+      color: rebeccapurple;
+      font-size: 50px;
+    }
+
+    /* 第一行 不论窗口怎么变换都不会改变第一行的样式 */
+    div p::first-line {
+      background-color: slategray;
+    }
+
+    /* 选中的文字 */
+    div p::selection {
+      color: orange;
+      background-color: blue;
+    }
+
+    /* 选中文本框中的提示文字 */
+    div input::placeholder {
+      color: bisque;
+    }
+
+    /* 在元素前面添加内容 注意这样添加是鼠标无法选中我们添加的内容的 */
+    div span::before {
+      content: '$';
+    }
+
+    /* 在元素后面添加内容 注意这样添加是鼠标无法选中我们添加的内容的 */
+    div span::after {
+      content: '.00';
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>bdchsvdcsd sbchsdcusd csbcsb </p>
+    <input type="text" placeholder="请输入密码">
+    <br>
+    <span>199</span>
+    <br>
+    <span>299</span>
+    <br>
+    <span>399</span>
+    <br>
+    <span>499</span>
+  </div>
+</body>
+
+</html>

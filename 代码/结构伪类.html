@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 选中第一个儿子选择器 */
+    /* 注意这个选择器拿到的是div下面的第一个p标签 如果p标签前面还有其他的元素将不会出现任何效果 */
+    /* 他是按照下面所有的子元素计算的 */
+    /* div>p:first-child {
+      background-color: rebeccapurple;
+    } */
+
+    /* 选中最后一个元素 */
+    /* div p:last-child {
+      background-color: skyblue;
+    } */
+
+
+    /* 选中指定第n个元素 注意这里是按照1开头不是按照0 */
+    /* 在这个括号里面可以写公式 比如： 2n 就能选中全部的偶数 写even就是偶数 */
+
+    /* 选中偶数 */
+    /* div p:nth-child(even) {
+      background-color: pink;
+    } */
+
+    /* 选中全部基数 */
+    /* div p:nth-child(odd) {
+      background-color: red;
+    } */
+
+    /* 选中前三个 注意这个括号里面都必须是 an + b 的形式 */
+    /* n 是 从0 开始 那么 -n + 3 也就是 3 2 1 -1 其中-1 明显选不到任何元素 */
+    /* div p:nth-child(-n+3) {
+      background-color: skyblue;
+    } */
+
+
+    /* first-of-type */
+    /* 选中div下 第一个类型为p的元素 */
+    /* div>p:first-of-type {
+      background-color: red;
+    } */
+
+    /* nth-of-type */
+    /* 选中div下 第n个类型为p的元素 */
+    /* 选中全部偶数 */
+    /* 其他和child一样使用 */
+    /* div p:nth-of-type(even) {
+      background-color: skyblue;
+    } */
+  </style>
+</head>
+
+<body>
+  <div>
+    <p>第一名</p>
+    <p>第二名</p>
+    <p>第三名</p>
+    <p>第四名</p>
+    <p>第五名</p>
+  </div>
+</body>
+
+</html>

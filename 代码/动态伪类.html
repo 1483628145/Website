@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    
+    /* 这个访问或者没访问是根据超链接来判断的 */
+    /* 没访问过的 */
+    a:link {
+      color: orange;
+    }
+
+    /* 访问过的 */
+    a:visited {
+      color: red;
+    }
+
+    /* 悬浮 */
+    a:hover {
+      color: black;
+    }
+
+    /* 选中但是未发生跳转 */
+    a:active {
+      color: skyblue;
+    }
+
+    /* 注意需要按照上面的顺序书写动态伪类不然可能会导致样式没有奏效 */
+
+
+    /* 获取焦点时触发--只有表单类元素才能使用 */
+    input:focus {
+      background-color: red;
+    }
+  </style>
+</head>
+
+<body>
+  <a href="https://baidu.com">百度</a>
+  <a href="https://youtube.com">天猫</a>
+  <br>
+  <input type="text">
+</body>
+
+</html>

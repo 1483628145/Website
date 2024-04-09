@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 不常用的伪类选择器 -->
+  <style>
+    /* 拿到第5个p元素  使用nth写 */
+    /* div p:nth-of-type(5) {
+      background-color: skyblue;
+    } */
+
+    /* 从下向上数 同样是拿到第五名 这个时候括号里面是从下向上数的number */
+    /* 同样的nth-last-of-type 使用方法也是同理上 */
+    div p:nth-last-child(3) {
+      background-color: slategray;
+    }
+
+    /* 选中唯一子元素 */
+    /* 这个时候应该只有测试3变化 测试1和测试2是不发生变化的 */
+    /* 同样的 nth-of-type也是一样使用 */
+    div span:only-child {
+      background-color: blue;
+    }
+
+    /* :root 以html为根标签 选中的是全部的网页 */
+    :root {
+      background-color: coral;
+    }
+
+    /* :empty 选中没有子元素的 */
+    div:empty {
+      width: 100px;
+      height: 200px;
+      background-color: bisque;
+    }
+  </style>
+</head>
+
+<body>
+  <div></div>
+  <div>
+    <span>测试3</span>
+  </div>
+  <div>
+    <span>测试1</span>
+    <p>第一个</p>
+    <p>第二个</p>
+    <p>第三个</p>
+    <p>第四个</p>
+    <p>第五个</p>
+    <p>第六个</p>
+    <span>测试2</span>
+
+  </div>
+</body>
+
+</html>
