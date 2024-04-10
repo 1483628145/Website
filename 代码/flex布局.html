@@ -7,15 +7,22 @@
     <title>Document</title>
     <style>
         .outer {
-            width: 1000px;
-            height: 600px;
+            width: 600px;
+            height: 900px;
             background-color: antiquewhite;
             /* 换成 flex布局 */
             /* 设置成flex布局以后 里面的子元素都会自动块状化 也就是说会自动转成块级元素 */
             display: flex;
 
-            /* 主轴换行方式 */
-            flex-wrap: wrap;
+            /* 主轴方向 */
+            flex-direction: row;
+
+            /* 换行 */
+            /* flex-wrap: wrap; */
+
+            /* 主轴对齐方式 flex-start 默认方式 以主轴开始方向开始对齐*/
+            justify-content: flex-start;
+
         }
 
         .inner {
@@ -24,6 +31,42 @@
             background-color: skyblue;
             border: 1px solid black;
             box-sizing: border-box;
+
+            /* 基线长度 */
+            flex-basis: 200px;
+            /* 伸 */
+            /* 设置了以后可以将多余的区域平均分给里面的item */
+            /* flex-grow: 1; */
+
+            /* 缩 */
+            /* 和伸不同的是 它是拿到和子元素的比例来缩 */
+            /* flex-shrink: 1; */
+
+            /* flex的复合写法 */
+            /* 
+            这样的写法就相当于 
+            上面的  flex-grow: 1;和 flex-shrink: 1; 和  flex-basis: 200px;
+            三个属性相加的结果
+            */
+            /* flex: 1 1 100px; */
+
+            /* 110 可以简写为 1 意思就是可以伸缩 然后宽度是设置的宽度 不是基线的宽度  */
+            /* flex: 1 1 0; */
+
+            flex: 1;
+        }
+
+        .inner2 {
+            /* 项目排序 */
+            /* 所有项目的默认排序都是0  设置的比0大 会排到后面 设置的比0小会排到前面*/
+            /* 项目是按照从小到大的顺序排列的 */
+            order: 0;
+            width: 300px;
+        }
+
+        .inner3{
+            /* 单独对齐 */
+            align-self: center;
         }
     </style>
 </head>
@@ -31,16 +74,9 @@
 <body>
     <div class="outer">
         <div class="inner">1</div>
-        <div class="inner">2</div>
-        <div class="inner">3</div>
-        <div class="inner">4</div>
-        <div class="inner">5</div>
-        <div class="inner">6</div>
-        <div class="inner">7</div>
-        <!-- <div class="inner">8</div>
-        <div class="inner">9</div>
-        <div class="inner">10</div>
-        <div class="inner">11</div> -->
+        <div class="inner inner2">2</div>
+        <div class="inner inner3">3</div>
+
     </div>
 </body>
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .outer {
+      width: 600px;
+      height: 600px;
+      background-color: antiquewhite;
+
+      /* 设置水直竖直居中 */
+      display: flex;
+
+      /* 方案一 */
+      /* justify-content: center;
+
+      align-items: center; */
+    }
+
+    .inner {
+      width: 200px;
+      height: 200px;
+      background-color: skyblue;
+
+      /* 方案二 */
+      margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer">
+    <div class="inner">1</div>
+  </div>
+</body>
+
+</html>
